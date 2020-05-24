@@ -4,7 +4,7 @@ require("dotenv").config();
 const fs = require("fs");
 const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const localImages = require("eleventy-plugin-local-images");
-const lazyImages = require("eleventy-plugin-lazyimages");
+// const lazyImages = require("eleventy-plugin-lazyimages");
 const ghostContentAPI = require("@tryghost/content-api");
 
 // const htmlMinTransform = require("./src/transforms/html-min-transform.js");
@@ -29,9 +29,9 @@ module.exports = function(config) {
   config.addPlugin(pluginRSS);
 
   // Apply performance attributes to images
-  config.addPlugin(lazyImages, {
-    cacheFile: ""
-  });
+  // config.addPlugin(lazyImages, {
+  //   cacheFile: ""
+  // });
 
   // Copy images over from Ghost
   config.addPlugin(localImages, {
@@ -194,6 +194,11 @@ module.exports = function(config) {
       }
     }
   });
+
+  // Copy `src/img/` to `_site/subfolder/img`
+  config.addPassthroughCopy({ "src/img": "img" });
+  config.addPassthroughCopy({ "src/fonts": "fonts" });
+  config.addPassthroughCopy({ "src/js": "js" });
 
   // Eleventy configuration
   return {

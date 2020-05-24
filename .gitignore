@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+
+.DS_Store
+
+# Don't track generated css file
+src/css/styles.css
