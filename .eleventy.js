@@ -18,7 +18,9 @@ const api = new ghostContentAPI({
 
 // Strip Ghost domain from urls
 const stripDomain = url => {
-  return url.replace(process.env.GHOST_API_URL, "");
+  // Added while we transfer across
+  // return url.replace(process.env.GHOST_API_URL, "");
+  return url.replace("https://greening.digital", "");
 };
 
 module.exports = function(config) {
@@ -74,7 +76,9 @@ module.exports = function(config) {
       });
 
     collection.map(doc => {
+      console.log(`pre strip: ${doc.url}`);
       doc.url = stripDomain(doc.url);
+      console.log(`post strip: ${doc.url}`);
       doc.primary_author.url = stripDomain(doc.primary_author.url);
 
       // Convert publish date into a Date object
@@ -196,9 +200,10 @@ module.exports = function(config) {
   });
 
   // Copy `src/img/` to `_site/subfolder/img`
-  config.addPassthroughCopy({ "src/img": "img" });
-  config.addPassthroughCopy({ "src/fonts": "fonts" });
-  config.addPassthroughCopy({ "src/js": "js" });
+  config.addPassthroughCopy({ "src/_includes/img": "img" });
+  config.addPassthroughCopy({ "src/_includes/fonts": "fonts" });
+  config.addPassthroughCopy({ "src/_includes/js": "js" });
+  config.addPassthroughCopy({ "src/_includes/css": "css" });
 
   // Eleventy configuration
   return {
