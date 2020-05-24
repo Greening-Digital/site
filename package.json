@@ -1,0 +1,38 @@
+{
+  "name": "greening-digital-11ty",
+  "version": "1.0.0",
+  "description": "The static site for greening digital",
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "yarn run dev",
+    "dev": "cross-env ELEVENTY_ENV=dev eleventy --serve",
+    "build": "cross-env ELEVENTY_ENV=prod eleventy",
+    "test": "yarn run build",
+    "lint": "eslint . --ext .js --cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Greening-Digital/site.git"
+  },
+  "author": "Chris Adams",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Greening-Digital/site/issues"
+  },
+  "homepage": "https://github.com/Greening-Digital/site#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.6",
+    "@tryghost/content-api": "^1.2.5",
+    "@tryghost/helpers": "^1.1.6",
+    "clean-css": "^4.2.1",
+    "cross-env": "^7.0.0",
+    "dotenv": "^8.0.0",
+    "eleventy-plugin-lazyimages": "liamfiddler/eleventy-plugin-lazyimages",
+    "eleventy-plugin-local-images": "^0.4.0"
+  },
+  "devDependencies": {
+    "eslint": "6.8.0",
+    "eslint-plugin-ghost": "1.4.1"
+  }
+}
