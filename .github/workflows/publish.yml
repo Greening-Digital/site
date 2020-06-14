@@ -16,6 +16,10 @@ jobs:
         node-version: '12.x'
     - run: npm install
     - run: npm run build
+      env:
+        GHOST_API_URL: ${{ secrets.GHOST_API_URL}}
+        GHOST_CONTENT_API_KEY: ${{ GHOST_CONTENT_API_KEY }}
+        SITE_URL: ${{ secrets.SITE_URL}}
     - name: Deploy to server
       uses: Pendect/action-rsyncer@v1.1.0
       env:
