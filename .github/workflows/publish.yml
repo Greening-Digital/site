@@ -1,0 +1,28 @@
+name: Publish
+
+on:
+  repository_dispatch:
+    branches:
+      types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Build Site
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - run: npm install
+    - run: npm run build
+    - name: Deploy to server
+      uses: Pendect/action-rsyncer@v1.1.0
+      env:
+        DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
+        DEPLOY_USER: ${{ secrets.USER }}
+        DEPLOY_HOST: ${{ secrets.HOST }}
+        DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+      with:
+        flags: '--vazuk'
+        src: 'dist/'
+        dest: "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH"
