@@ -27,4 +27,4 @@ jobs:
       with:
         flags: '-vazuk'
         src: 'dist/'
-        dest: "${{ secrets.USER }}@${{ secrets.HOST }}:${{ secrets.DEPLOY_PATH }}"
+        dest: "grngdgtl@crommelin.uberspace.de:/var/www/virtual/grngdgtl/greening.digital/"
