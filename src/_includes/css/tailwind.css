@@ -1,0 +1,7 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+@import "./ghost-specific.css";
+@import "./ghost-markdown.css";
+
+@import "tailwindcss/utilities";

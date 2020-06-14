@@ -1,0 +1,207 @@
+---
+pagination:
+  data: collections.posts
+  size: 7
+  alias: posts
+---
+
+{% extends 'layouts/default.njk' %}
+
+{# {{!-- The main content area --}} #}
+{% block content %}
+<div class="bg-brand-green-lighter px-4">
+  <div class="container max-w-5xl mx-auto flex flex-wrap flex-col md:flex-row items-center pt-8">
+    <!--Left Col-->
+    <div class="flex flex-col w-full md:w-4/5 justify-center items-start md:text-left">
+      <h1 class="my-4 text-5xl font-display leading-tight ">
+        Sustainability for digital teams
+      </h1>
+      <p class="leading-normal text-2xl mb-4 text-gray-600 font-display">
+        We help you understand the environmental impact of digital services, and
+        how to make them faster, greener, and smarter.
+      </p>
+      <div class="flex flex-row">
+        <button
+          class="mx-auto lg:ml-0 lg:mr-4 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg mr-4">
+          See how
+        </button>
+        <button
+          class="mx-auto lg:ml-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg, mr-4">
+          Get in touch
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+{# {{!-- what we offer and how we help --}} #}
+<section class="bg-white border-b py-4 px-4 text-gray-600">
+  <div class="container max-w-5xl mx-auto">
+    <div class="py-4 lg:w-2/3 mx-auto mb-10">
+      <h2 class="w-full text-3xl font-display font-bold leading-tight text-gray-800 pb-4">
+        How we help you build greener digital products
+      </h2>
+
+      <h3>Knowing where to start can be hard, if you want to make digital products more sustainable. We use a framework
+        we call <em></em>Platform, Packets and Process</em> to help work how to begin your journey.</h3>
+    </div>
+
+    {# {{!-- platform --}} #}
+    <div class="flex flex-wrap">
+      <div class="flex lg:flex-row flex-col">
+        <img class="flex-initial lg:w-40 lg:h-40 lg:pr-4" src="/img/ppp/platform.svg">
+        <div class="flex-initial max-w-3xl">
+          <h3 class="text-3xl text-gray-800 font-bold font-display leading-none mb-3">
+            Platform
+          </h3>
+          <p>
+            For infrastructure you run, we offer architectural consulting to help you green your stack, and performance
+            engineering to help make the most of the compute power you do pay for.
+          </p>
+          <p class="pt-2">
+            You burn less cash, and emit
+            less carbon.
+          </p>
+          <p><a href="/platform" class="text-brand-green-darker text-xl">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+    </div>
+    {# {{!-- packets --}} #}
+    <div class="w-full mt-6">
+      <div class="flex lg:flex-row flex-col">
+        <img class="flex-initial lg:w-40 lg:h-40 lg:pr-4" src="/img/ppp/packets.svg">
+        <div class="flex-intial max-w-3xl">
+          <h3 class="text-3xl text-gray-800 font-bold font-display  leading-none mb-3">
+            Packets
+          </h3>
+          <p>
+            Everything you send over the internet is sent as packets of data, and it all has a carbon footprint.</p>
+          <p>Here we help you audit your products, set up budgets for carbon and performance, then help you manage it
+            with continuous monitoring.
+          </p>
+
+          <p class="pt-2">You get sites and apps that are faster, more usable, and result in measurably lower carbon
+            emissions.
+          </p>
+          <p><a href="/packets" class="text-brand-green-darker text-xl">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+
+    {# {{!-- process --}} #}
+    <div class="flex flex-wrap">
+      <div class="mt-6">
+        <div class="flex lg:flex-row flex-col">
+          <img class="flex-initial lg:w-40 lg:h-40 lg:pr-4" src="/img/ppp/process.svg">
+          <div class="flex-initial max-w-3xl">
+            <h3 class="text-3xl text-gray-800 font-bold font-display leading-none mb-3">
+              Process
+            </h3>
+            <p>
+              Finally, how and where you work, and product decisions you make over its lifetime have environmental
+              impacts, and affects how you can attract or retain talent. Here, we help your whole team view their work
+              through a lens
+              of sustainability, with workshops and strategic briefings.</p>
+            <p class="pt-2">
+              You learn to uncover risks and new
+              opportunities early. You also see where the biggest levers for impact are in your team, to start working
+              greener
+              and
+              smarter.</p>
+            </p>
+
+
+            <p><a href="/process" class="text-brand-green-darker text-xl">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  </div>
+</section>
+{# {{!-- who we are --}} #}
+<section class="bg-brand-green-lighter border-b py-2 px-4 ">
+  <div class="container max-w-5xl mx-auto">
+
+    <h3 class="text-3xl font-display mb-4">Who we are</h3>
+
+    <div class="flex flex-col lg:flex-row">
+      <div class="mt-4 px-2 flex-1">
+        {# {{!-- pic --}} #}
+        <img class="rounded-full object-cover object-center text-center mx-auto"
+          src="/img/photo/chris@0,25x.jpg" alt="" />
+        <div class="m-4 p-2 max-w-xs mx-auto text-center">
+          <h3 class="font-display text-2xl">Chris Adams</h3>
+          <p class="text-brand-green-darker">
+            <a href="https://github.com/mrchrisadams/">Github</a> |
+            <a href="https://www.linkedin.com/in/mrchrisadams/">LinkedIn</a> |
+            <a href="https://twitter.com/mrchrisadams">Twitter</a></p>
+        </div>
+      </div>
+
+      <div class="mt-4 px-2 flex-1">
+        {# {{!-- pic --}} #}
+        <img class="rounded-full object-cover object-center text-center mx-auto"
+          src="/img/photo/martin@0,25x.jpg" alt="" />
+        <div class="m-4 p-2 max-w-xs mx-auto text-center">
+          <h3 class="font-display text-2xl">Martin Meyerhoff</h3>
+          <p class="text-brand-green-darker">
+            <a href="https://github.com/mamhoff/">Github</a> |
+            <a href="https://www.linkedin.com/in/martin-anselm-meyerhoff-7aa55577/">LinkedIn</a> |
+            <a href="https://twitter.com/mamhoff">Twitter</a></p>
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-4 px-2 flex-1">
+        {# {{!-- pic --}} #}
+        <img class="rounded-full object-cover object-center text-center mx-auto" src="/img/photo/ryan@0,25x.jpg"
+          alt="" />
+        <div class="m-4 p-2 max-w-xs mx-auto text-center">
+          <h3 class="font-display text-2xl">Ryan Parr</h3>
+          <p class="text-brand-green-darker">
+            <a href="https://github.com/mamhoff/">Github</a> |
+            <a href="https://www.linkedin.com/in/ryan-parr-3b6777165/">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+{# {{!-- who we have worked with --}} #}
+<section class="border-b py-2 px-4 ">
+  <div class="container max-w-5xl mx-auto">
+    <h3 class="text-3xl font-display border-gray-800 mb-4">Who we've worked with</h3>
+
+
+    <div class="flex items-center flex-col lg:flex-row">
+      <div class="flex-1 align-middle mx-4 px-4 flex-wrap">
+        <img src="/img/logos/climateKIC.png" />
+      </div>
+      <div class="flex-1 max-w-xs align-middle px-4 mx-4">
+        <img src="/img/logos/mozilla.png" />
+      </div>
+      <div class="flex-1 max-w-xs align-middle px-4 mx-4">
+        <img src="/img/logos/spendnetwork.png" />
+      </div>
+    </div>
+    <div class="flex items-center flex-col lg:flex-row">
+      <div class="flex-1 align-middle mx-4 px-4 flex-wrap">
+        <img src="./img/logos/mapcamp.png" />
+      </div>
+      <div class="flex-1 max-w-xs align-middle px-4 mx-4">
+        <img src="/img/logos/edge-ryders.png" />
+      </div>
+      <div class="flex-1 max-w-xs align-middle px-4 mx-4">
+        <img src="/img/logos/the-panoply.png" />
+      </div>
+    </div>
+</section>
+
+{% endblock %}

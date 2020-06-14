@@ -1,0 +1,46 @@
+{
+  "name": "greening-digital-11ty",
+  "version": "1.0.0",
+  "description": "The static site for greening digital",
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "npm run dev",
+    "build": "npm-run-all build:css build:html",
+    "build:css": "cross-env NODE_ENV=production postcss src/_includes/css/tailwind.css -o src/_includes/css/styles.css",
+    "build:html": "cross-env ELEVENTY_ENV=prod eleventy",
+    "dev": "npm-run-all --parallel dev:css dev:html",
+    "dev:css": "postcss src/_includes/css/tailwind.css -o src/_includes/css/styles.css --watch",
+    "dev:html": "cross-env ELEVENTY_ENV=dev eleventy --serve --port=8181",
+    "lint": "eslint . --ext .js --cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Greening-Digital/site.git"
+  },
+  "author": "Chris Adams",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Greening-Digital/site/issues"
+  },
+  "homepage": "https://github.com/Greening-Digital/site#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.6",
+    "@tryghost/content-api": "^1.2.5",
+    "@tryghost/helpers": "^1.1.6",
+    "cross-env": "^7.0.0",
+    "dotenv": "^8.0.0",
+    "autoprefixer": "^9.7.2",
+    "cssnano": "^4.1.10",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.3",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.4.5",
+    "eleventy-plugin-lazyimages": "liamfiddler/eleventy-plugin-lazyimages",
+    "eleventy-plugin-local-images": "^0.4.0"
+  },
+  "devDependencies": {
+    "eslint": "6.8.0",
+    "eslint-plugin-ghost": "1.4.1"
+  }
+}
