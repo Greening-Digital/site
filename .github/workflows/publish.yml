@@ -28,6 +28,6 @@ jobs:
         DEPLOY_HOST: ${{ secrets.HOST }}
         DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
       with:
-        flags: '--vazuk'
+        flags: '-vazuk'
         src: 'dist/'
         dest: "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH"
