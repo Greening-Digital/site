@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run dev",
     "build": "npm-run-all build:css build:html",
-    "build:css": "cross-env postcss src/_includes/css/tailwind.css -o src/_includes/css/styles.css",
+    "build:css": "cross-env NODE_ENV=production postcss src/_includes/css/tailwind.css -o src/_includes/css/styles.css",
     "build:html": "cross-env ELEVENTY_ENV=prod eleventy",
     "dev": "npm-run-all --parallel dev:css dev:html",
     "dev:css": "postcss src/_includes/css/tailwind.css -o src/_includes/css/styles.css --watch",
